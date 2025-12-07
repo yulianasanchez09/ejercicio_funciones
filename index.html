@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras Planas</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <header class="bg-success text-white text-center py-4 mt-5 mb-5">
+        <h1 class="fw-bold">Ejercicio funciones</h1>
+        <p class="mb-0">Cálculo de áreas de figuras planas</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient bg-dark fixed-top shadow-lg py-2">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.2.html">Figuras Solidas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Figuras Planas</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Figuras
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#triangulo">Triangulo</a></li>
+                            <li><a class="dropdown-item" href="#paralelogramo">Paralelogramo</a></li>
+                            <li><a class="dropdown-item" href="#rectángulo">Rectángulo</a></li>
+                            <li><a class="dropdown-item" href="#cuadrado">Cuadrado</a></li>
+                            <li><a class="dropdown-item" href="#rombo">Rombo</a></li>
+                            <li><a class="dropdown-item" href="#cometa">Cometa</a></li>
+                            <li><a class="dropdown-item" href="#trapecio">Trapecio</a></li>
+                            <li><a class="dropdown-item" href="#circulo">Circulo</a></li>
+                        </ul>
+                </ul>
+                </ul>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="triangulo" class="bg-secondary p-4 rounded shadow-sm container py-5 mb-5">
+            <h2 class="text-center mb-4">Área del Triángulo</h2>
+            <figure class="text-center py-3">
+                <img src="assets/img/Triangulo.jpg" class="img-fluid rounded shadow-lg" style="max-width:500px;"
+                    alt="Triángulo">
+            </figure>
+
+            <label for="baseTri" class="form-label fw-semibold">Base (b)</label>
+            <input type="text" id="baseTri" class="form-control mb-3" placeholder="Base">
+
+            <label for="alturaTri" class="form-label fw-semibold">Altura (h)</label>
+            <input type="text" id="alturaTri" class="form-control mb-4" placeholder="Altura">
+
+            <button onclick="areaTriangulo()" class="btn btn-outline-dark w-100 mb-3">Calcular</button>
+            <p id="resTriangulo" class="alert alert-info text-center">Resultado</p>
+        </section>
+
+        <section id="paralelogramo" class="bg-secondary p-4 rounded shadow-sm container py-5 mb-5">
+            <h2 class="text-center mb-4">Área del Paralelogramo</h2>
+            <figure class="text-center py-3">
+                <img src="assets/img/Paralelogramo.jpg" class="img-fluid rounded shadow-lg" style="max-width:500px;"
+                    alt="Paralelogramo">
+            </figure>
+
+            <label for="baseTri" class="form-label fw-semibold">Base (b)</label>
+            <input type="text" id="basePar" class="form-control mb-3" placeholder="Base">
+
+            <label for="baseTri" class="form-label fw-semibold">Altura (h)</label>
+            <input type="text" id="alturaPar" class="form-control mb-3" placeholder="Altura">
+
+            <button onclick="areaParalelogramo()" class="btn btn-outline-dark w-100 mb-3">Calcular</button>
+            <p id="resParalelogramo" class="alert alert-info text-center">Resultado</p>
+
+        </section>
+
+        <section id="rectángulo" class="bg-secondary p-4 rounded shadow-sm container py-5 mb-5">
+            <h2 class="text-center mb-4">Área del Rectángulo</h2>
+            <figure class="text-center py-3 ">
+                <img src="assets/img/Rectángulo.jpg" class="img-fluid rounded shadow-lg" style="max-width:500px;"
+                    alt="Rectángulo">
+            </figure>
+
+            <label for="baseRec" class="form-label fw-semibold">Base (b)</label>
+            <input type="text" id="baseRec" class="form-control mb-3" placeholder="Base">
+
+            <label for="alturaRec" class="form-label fw-semibold">Altura (a)</label>
+            <input type="text" id="alturaRec" class="form-control mb-3" placeholder="Altura">
+
+            <button onclick="areaRectangulo()" class="btn btn-outline-dark w-100 mb-3">Calcular</button>
+            <p id="resRectangulo" class="alert alert-info text-center">Resultado</p>
+        </section>
+
+        <section id="cuadrado" class="bg-secondary p-4 rounded shadow-sm container py-5 mb-5">
+            <h2 class="text-center mb-4">Área del Cuadrado</h2>
+            <figure class="text-center py-3">
+                <img src="assets/img/Cuadrado.jpg" class="img-fluid rounded shadow-lg" style="max-width:500px;"
+                    alt="Cuadrado">
+            </figure>
+
+            <label for="alturaCua" class="form-label fw-semibold">Altura (a)</label>
+            <input type="text" id="alturaCua" class="form-control mb-4" placeholder="Altura">
+
+            <button onclick="areaCuadrado()" class="btn btn-outline-dark w-100 mb-3">Calcular</button>
+            <p id="resCuadrado" class="alert alert-info text-center">Resultado</p>
+        </section>
+
+        <section id="rombo" class="bg-secondary p-4 rounded shadow-sm container py-5 mb-5">
+            <h2 class="text-center mb-4">Área del Rombo</h2>
+            <figure class="text-center py-3">
+                <img src="assets/img/Rombo.jpg" class="img-fluid rounded shadow-lg" style="max-width:500px;"
+                    alt="Rombo">
+            </figure>
+
+            <label for="diagMayor" class="form-label fw-semibold">Diagonal Mayor (D)</label>
+            <input type="text" id="diagMayor" class="form-control mb-3" placeholder="Mayor">
+
+            <label for="diagMenor" class="form-label fw-semibold">Diagonal Menor (d)</label>
+            <input type="text" id="diagMenor" class="form-control mb-3" placeholder="Menor">
+
+            <button onclick="areaRombo()" class="btn btn-outline-dark w-100 mb-3">Calcular</button>
+            <p id="resRombo" class="alert alert-info text-center">Resultado</p>
+        </section>
+
+        <section id="cometa" class="bg-secondary p-4 rounded shadow-sm container py-5 mb-5">
+            <h2 class="text-center mb-4">Área de la Cometa</h2>
+            <figure class="text-center py-3">
+                <img src="assets/img/Cometa.jpg" class="img-fluid rounded shadow-lg" style="max-width:500px;"
+                    alt="Cometa">
+            </figure>
+
+            <label for="diagMayor" class="form-label fw-semibold">Diagonal Mayor (D)</label>
+            <input type="text" id="diagMayor" class="form-control mb-3" placeholder="Mayor">
+
+            <label for="diagMenor" class="form-label fw-semibold">Diagonal Menor (d)</label>
+            <input type="text" id="diagMenor" class="form-control mb-3" placeholder="Menor">
+
+            <button onclick="areaCometa()" class="btn btn-outline-dark w-100 mb-3">Calcular</button>
+            <p id="resCometa" class="alert alert-info text-center">Resultado</p>
+        </section>
+
+        <section id="trapecio" class="bg-secondary p-4 rounded shadow-sm container py-5 mb-5">
+            <h2 class="text-center mb-4">Área del Trapecio</h2>
+            <figure class="text-center py-3">
+                <img src="assets/img/Trapecio.jpg" class="img-fluid rounded shadow-lg" style="max-width:500px;"
+                    alt="Trapecio">
+            </figure>
+
+            <label for="baseMayor" class="form-label fw-semibold">Base Mayor (B)</label>
+            <input type="text" id="baseMayor" class="form-control mb-3" placeholder="Mayor">
+
+            <label for="baseMenor" class="form-label fw-semibold">Base Menor (b)</label>
+            <input type="text" id="baseMenor" class="form-control mb-3" placeholder="Menor">
+
+            <label for="alturaTrap" class="form-label fw-semibold">Altura (h)</label>
+            <input type="text" id="alturaTrap" class="form-control mb-3" placeholder="Altura">
+
+            <button onclick="areaTrapecio()" class="btn btn-outline-dark w-100 mb-3">Calcular</button>
+            <p id="resTrapecio" class="alert alert-info text-center">Resultado</p>
+        </section>
+
+        <section id="circulo" class="bg-secondary p-4 rounded shadow-sm container py-5 mb-5">
+            <h2 class="text-center mb-4">Área del Círculo</h2>
+            <figure class="text-center py-3">
+                <img src="assets/img/Circulo.jpg" class="img-fluid rounded shadow-lg" style="max-width:500px;"
+                    alt="Circulo">
+            </figure>
+
+            <label for="radioCir" class="form-label fw-semibold">Radio (r)</label>
+            <input type="text" id="radioCir" class="form-control mb-4" placeholder="Radio">
+
+            <button onclick="areaCirculo()" class="btn btn-outline-dark w-100 mb-3">Calcular</button>
+            <p id="resCirculo" class="alert alert-info text-center">Resultado</p>
+        </section>
+    </main>
+
+    <aside></aside>
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">© 2025 - Figuras planas</p>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/figuras.planas.js"></script>
+</body>
+
+</html>

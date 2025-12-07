@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras Solidas</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <header class="bg-success text-white text-center py-4 mt-5 mb-5">
+        <h1 class="fw-bold">Ejercicio funciones</h1>
+        <p class="mb-0">Cálculo de áreas de figuras Sólidas</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient bg-dark fixed-top shadow-lg py-2">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.2.html">Figuras Solidas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Figuras Planas</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Figuras
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#cubo">Cubo</a></li>
+                            <li><a class="dropdown-item" href="#paralelepipedo">Paralelepipedo</a></li>
+                            <li><a class="dropdown-item" href="#cilindro">Cilindro</a></li>
+                            <li><a class="dropdown-item" href="#esfera">Esfera</a></li>
+                            <li><a class="dropdown-item" href="#cono">Cono</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section id="cubo" class="bg-secondary p-4 rounded shadow-sm container py-5 mb-5">
+            <h2 class="text-center mb-4">Volumen del Cubo</h2>
+            <figure class="text-center py-3">
+                <img src="assets/img/Cubo.png" class="img-fluid rounded shadow-lg" style="max-width:200px;" alt="Cubo">
+            </figure>
+
+            <label for="ladoCubo" class="form-label fw-semibold">Lado (l)</label>
+            <input type="text" id="ladoCubo" class="form-control mb-3" placeholder="" step="any">
+
+            <button onclick="volumenCubo()" class="btn btn-outline-dark w-100 mb-3">Calcular</button>
+            <p id="resCubo" class="alert alert-info text-center">Resultado</p>
+        </section>
+
+        <section id="paralelepipedo" class="bg-secondary p-4 rounded shadow-sm container py-5 mb-5">
+            <h2 class="text-center mb-4">Volumen del Paralelepípedo</h2>
+            <figure class="text-center py-3">
+                <img src="assets/img/Paralelepipedo.png" class="img-fluid rounded shadow-lg" style="max-width:200px;"
+                    alt="Paralelepipedo">
+            </figure>
+
+            <label for="largoP" class="form-label fw-semibold">Largo (l)</label>
+            <input type="text" id="largoP" class="form-control mb-3" placeholder="" step="any">
+
+            <label for="anchoP" class="form-label fw-semibold">Ancho (b)</label>
+            <input type="text" id="anchoP" class="form-control mb-3" placeholder="" step="any">
+
+            <label for="altoP" class="form-label fw-semibold">Alto (h)</label>
+            <input type="text" id="altoP" class="form-control mb-3" placeholder="" step="any">
+
+            <button onclick="volumenParalelepipedo()" class="btn btn-outline-dark w-100 mb-3">Calcular</button>
+            <p id="resParalelepipedo" class="alert alert-info text-center">Resultado</p>
+        </section>
+
+        <section id="cilindro" class="bg-secondary p-4 rounded shadow-sm container py-5 mb-5">
+            <h2 class="text-center mb-4">Volumen del Cilindro</h2>
+            <figure class="text-center py-3">
+                <img src="assets/img/Cilindro.png" class="img-fluid rounded shadow-lg" style="max-width:200px;"
+                    alt="Cilindro">
+            </figure>
+
+            <label for="radioCil" class="form-label fw-semibold">Radio (r)</label>
+            <input type="text" id="radioCil" class="form-control mb-3" placeholder="" step="any">
+
+            <label for="alturaCil" class="form-label fw-semibold">Altura (h)</label>
+            <input type="text" id="alturaCil" class="form-control mb-3" placeholder="" step="any">
+
+            <button onclick="volumenCilindro()" class="btn btn-outline-dark w-100 mb-3">Calcular</button>
+            <p id="resCilindro" class="alert alert-info text-center">Resultado</p>
+        </section>
+
+        <section id="esfera" class="bg-secondary p-4 rounded shadow-sm container py-5 mb-5">
+            <h2 class="text-center mb-4">Volumen de la Esfera</h2>
+            <figure class="text-center py-3">
+                <img src="assets/img/Esfera.png" class="img-fluid rounded shadow-lg" style="max-width:200px;"
+                    alt="Esfera">
+            </figure>
+
+            <label for="radioEsf" class="form-label fw-semibold">Radio (r)</label>
+            <input type="text" id="radioEsf" class="form-control mb-3" placeholder="" step="any">
+
+            <button onclick="volumenEsfera()" class="btn btn-outline-dark w-100 mb-3">Calcular</button>
+            <p id="resEsfera" class="alert alert-info text-center">Resultado</p>
+        </section>
+
+        <section id="cono" class="bg-secondary p-4 rounded shadow-sm container py-5 mb-5">
+            <h2 class="text-center mb-4">Volumen del Cono</h2>
+            <figure class="text-center py-3">
+                <img src="assets/img/Cono.png" class="img-fluid rounded shadow-lg" style="max-width:200px;" alt="Cono">
+            </figure>
+
+            <label for="radioCono" class="form-label fw-semibold">Radio (r)</label>
+            <input type="text" id="radioCono" class="form-control mb-3" placeholder="" step="any">
+
+            <label for="alturaCono" class="form-label fw-semibold">Altura (h)</label>
+            <input type="text" id="alturaCono" class="form-control mb-3" placeholder="" step="any">
+
+            <button onclick="volumenCono()" class="btn btn-outline-dark w-100 mb-3">Calcular</button>
+            <p id="resCono" class="alert alert-info text-center">Resultado</p>
+        </section>
+    </main>
+
+
+    <aside></aside>
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">© 2025 - Figuras Sólidas</p>
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/figuras.solidas.js"></script>
+
+</body>
+
+</html>
